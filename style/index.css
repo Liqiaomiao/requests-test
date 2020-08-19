@@ -1,0 +1,19 @@
+*{margin: 0;padding: 0;color:#555;}
+a{text-decoration: none}
+main{
+    width: 1204px;
+    margin: 24px  auto;
+}
+pre{
+    width: 636px;
+    background: #EEC;
+    white-space: normal;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+p{
+    margin-bottom: 10px;
+}
+h1{
+    margin-bottom: 20px;
+}

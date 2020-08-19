@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Title</title>
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
-<iframe src="http://news.baidu.com/" frameborder="0"></iframe>
+
+<div>
+    <main>
+        <h1>项目操作记录：混合内容</h1>
+        <p>报错如下</p>
+        <pre>
+        Mixed Content: The page at 'https://liqiaomiao.github.io/requests-test/index.html' was loaded over HTTPS, but requested an insecure frame 'http://news.baidu.com/'. This request has been blocked; the content must be served over HTTPS.
+    </pre>
+        <img src="./images/error.png" alt="">
+        <p>原因是出现了混合内容</p>
+        <p>混合内容出现的情况：页面通过https加载，但是其他资源通过<strong>不安全的http</strong>加载，称之为混合内容</p>
+        <p>因为通过http和https内容以显示同一个页面</p>
+        <p>解决方式： 增加meta属性 </p>
+        <pre> &lt;meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"&gt;</pre>
+        <p>目前页面加了这个meta属性，所以后面的iframe加载成功，感兴趣的可以删除，并找个https环境试试</p>
+        <p>
+            <a href="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/fixing-mixed-content?hl=zh-cn">click here: 参考资料-防止混合内容</a>
+
+        </p>
+        <iframe src="http://news.baidu.com/" frameborder="0"></iframe>
+    </main>
+
+</div>
 </body>
 </html>
